@@ -1,0 +1,52 @@
+{
+  "candidateId": "507f1f77bcf86cd799439013",
+  "interviewerId": "507f1f77bcf86cd799439012",
+  "interviewRequestId": "68e624a664468d1e31ce54f5",
+  "userType": "candidate",
+  "feedback": {
+    "questions": [
+      {
+        "question": "Has relevant educational background for the role",
+        "answer": "Completed Bachelor's in Computer Science and relevant online courses."
+      },
+      {
+        "question": "Demonstrated strong academic performance",
+        "answer": "Graduated with first-class distinction."
+      },
+      {
+        "question": "Shows commitment to continuous learning",
+        "answer": "Regularly takes new certifications and participates in hackathons."
+      },
+      {
+        "question": "Has relevant certifications or training",
+        "answer": "Certified in AWS Cloud Practitioner and React.js."
+      },
+      {
+        "question": "Demonstrated strong technical skills",
+        "answer": "Excellent in React, Node.js, and MongoDB development."
+      },
+      {
+        "question": "Communicated ideas clearly and effectively",
+        "answer": "Explained project workflows with clear reasoning and examples."
+      },
+      {
+        "question": "Shows genuine enthusiasm for the role",
+        "answer": "Very motivated to join a fast-paced environment and contribute to team success."
+      },
+      {
+        "question": "Came well-prepared for the interview",
+        "answer": "Reviewed company projects, values, and recent releases in advance."
+      },
+      {
+        "question": "Shows proactive approach to work",
+        "answer": "Frequently identifies issues early and suggests improvements."
+      },
+      {
+        "question": "Strongly recommend for hire",
+        "answer": "Would be a great fit for this position due to both technical and interpersonal strengths."
+      }
+    ],
+    "overallRating": "4.5"
+  },
+  "timestamp": "2024-01-15T10:30:00.000Z"
+}

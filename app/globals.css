@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #4338ca;
+  --primary-light: #6366f1;
+  --primary-dark: #3730a3;
+  --secondary-color: #7c3aed;
+  --secondary-light: #a78bfa;
+  --secondary-dark: #5b21b6;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-color: #e5e7eb;
+  --card-bg: #ffffff;
+  --input-bg: #ffffff;
+  --success-color: #16a34a;
+  --error-color: #ef4444;
+}
+
+body {
+  background: #ffffff;
+  color: var(--text-primary);
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ======== Stream Call Controls Override ======== */
+.str-video__call-controls {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Base Button Styling */
+.str-video__composite-button,
+.str-video__call-controls__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Active State (e.g., Mic/Video On) */
+.str-video__composite-button--active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* Danger Button (Leave Call) */
+.str-video__call-controls__button--variant-danger {
+  background: var(--error-color);
+  color: white;
+  border-color: var(--error-color);
+}
+
+.str-video__call-controls__button--variant-danger:hover {
+  background: #dc2626;
+  border-color: #dc2626;
+}
+
+/* Icon Styling */
+.str-video__icon {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Menu Toggle Button (e.g., Mic/Video Dropdown) */
+.str-video__menu-toggle-button {
+  height: 40px;
+  width: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  margin-left: 4px;
+}
+
+/* Button Group Container */
+.str-video__composite-button__button-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Focus States */
+.str-video__composite-button:focus-visible,
+.str-video__call-controls__button:focus-visible {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 2px;
+}
+
+/* ======== Stream Layout Overrides ======== */
+.str-video__call-stats {
+  max-width: 500px;
+  position: relative;
+}
+
+.str-video__speaker-layout__wrapper {
+  max-height: 700px;
+}
+
+.str-video__participant-details,
+.str-video__menu-container,
+.str-video__notification {
+  color: var(--text-primary);
+}
+
+.str-video__participant-list {
+  background-color: var(--card-bg);
+  padding: 16px;
+  border-radius: 12px;
+  color: var(--text-primary);
+  height: 100%;
+  border: 1px solid var(--border-color);
+}
+
+/* ======== Glassmorphism ======== */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+}
+
+.glassmorphism2 {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+}
+
+/* ======== Utilities ======== */
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+  .text-gradient {
+    background: linear-gradient(
+      135deg,
+      var(--primary-light) 0%,
+      var(--secondary-light) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* ======== Animations ======== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.show-block {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  animation: show 0.7s forwards ease-out;
+}
+
+/* ======== Scrollbar ======== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* ======== Focus States ======== */
+*:focus-visible {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ======== Responsive ======== */
+@media (max-width: 768px) {
+  .str-video__composite-button,
+  .str-video__call-controls__button {
+    height: 36px;
+    width: 36px;
+  }
+
+  .str-video__menu-toggle-button {
+    height: 36px;
+    width: 28px;
+  }
+}
+
+.call-controlls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.str-video__composite-button__button-group
+  .str-video__call-controls__button.str-video__menu-toggle-button {
+  display: none;
+}
+
+.str-video__composite-button.str-video__composite-button--menu
+  .str-video__composite-button__button {
+  padding-right: 0.5rem;
+}
+
+.str-video__participant-view
+  .str-video__participant-details
+  .str-video__participant-details__name {
+  color: white;
+}
+
+.str-video__notification {
+  color: white;
+}
+.str-video__generic-menu {
+  color: white;
+}
